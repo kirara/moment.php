@@ -60,7 +60,7 @@ return array(
             return $ifPast($direction, 'hodinou', 'hodinu');
         },
         "hh"     => function ($count, $direction, Moment $m) use ($ifPast, $ifCountSmaller) {
-            $ifPast($direction, '%d hodinami', $ifCountSmaller($count, 5, '%d hodiny', '%d hodin'));
+            return $ifPast($direction, '%d hodinami', $ifCountSmaller($count, 5, '%d hodiny', '%d hodin'));
         },
         "d"      => function ($count, $direction, Moment $m) use ($ifPast) {
             return $ifPast($direction, 'dnem', 'den');
